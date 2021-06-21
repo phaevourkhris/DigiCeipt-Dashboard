@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0em;
+}
+input, button{
+    border-style: none;
+}
+.icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 50px;
+}
+ul{
+    list-style: none;
+}
+main{
+    display: flex;
+}
+nav{
+    width: 25vw;
+    background-color: #4C3E9E;
+    color: #Ffffff;
+    border-radius: 0px 40px 40px 0px;
+    padding: 74px 49px 100px 50px;
+}
+nav>img{
+    height: 96px;
+width: 100px;
+border-radius: 50%;
+margin-bottom: 20px;
+}
+nav>h1{
+    font-family: Red Hat Display;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px;
+padding-bottom: 36px;
+border-bottom: 3px solid #FFFFFF;
+margin-bottom: 50px;
+}
+nav a{
+    font-family: Red Hat Display;
+font-style: normal;
+font-weight: 500;
+line-height: 32px;
+display: flex;
+    align-items: center;
+}
+nav li{
+    margin-bottom: 80px;
+}
+nav>div>p:first-child{
+    margin-top: 50px;
+}
+nav>div>p{
+    margin-bottom: 8px;
+}
+
+
+
+
+section{
+    width: 75%;
+    margin: 76px 100px 185px 50px;
+    position: relative;
+}
+label, input{
+    display: block;
+}
+section>div>input{
+    width: 30vw;
+height: 43px;
+border-radius: 20px;
+position: absolute;
+right: 0px;
+border: 1px solid #000000;
+}
+section>div>span{
+    position: absolute;
+    right: 0px;
+    background: rgba(76, 62, 158, 0.8);
+border-radius: 20px;
+width: 58px;
+height: 43px;
+display: flex !important;
+justify-content: center;
+align-items: center;
+}
+
+form{
+    margin-top: 50px;
+}
+form>legend{
+    font-family: Red Hat Display;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px;
+color: #4C3E9E;
+padding-bottom: 30px;
+border-bottom: 2px solid #4C3E9E;
+margin-bottom: 60px;
+}
+form>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+form>div>div{
+    width: 40%;
+}
+form>div>p{
+    font-family: Red Hat Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    color: #000000C9;
+}
+form>div>button{
+    font-family: Red Hat Display;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: 0.035em;
+text-align: center;
+width: 250px;
+height: 72px;
+background: #4C3E9E;
+box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+color: #FFFFFF;
+}
+form label{
+    font-family: Red Hat Display;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px;
+margin-bottom: 20px;
+}
+form input, select{
+margin-bottom: 50px;
+height: 50px;
+    border: 1px solid #4C3E9E;
+border-radius: 10px;
+width: 100%;
+}
+input[type="checkbox"]{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 40px;
+}
+form button{
+    font-family: Red Hat Display;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: 0.035em;
+text-align: center;
+    height: 72px;
+width: 337px;
+border-radius: 10px;
+box-shadow: 3px 4px 4px 0px #00000040;
+}
+.whitebg{
+    background: #FFFFFF;
+    color: #4C3E9E;
+    border: 1px solid #000000;
+    margin-right: 70px;
+}
+.purplebg{
+    color: #Ffffff;
+    background: #4C3E9E;
+}
+div.Buttons{
+    position: absolute;
+    right: 0px;
+}
+input[type="checkbox"]{
+    margin-bottom: 0px;
+}
+input:checked ~ input[type='date']{
+    pointer-events: visible;
+}
+nav li.active{
+    background: #FFFFFF;
+border-radius: 0px 20px 20px 0px;
+color: rgba(0, 0, 0, 0.57);
+}
+
+
+@media (max-width: 992px){
+    nav{
+        display: block;
+        z-index: 100;
+        position: absolute;
+        width: 100vw;
+        transform: translatey(-100%);
+        transition: 0.2s;
+    }
+    section{
+        width: 100vw;
+        margin: 32px 32px 32px 32px;
+    }
+    form>div>button{
+        width: 120px;
+    }
+    *{
+        font-size: 1rem !important;
+    }
+    input[type="checkbox"]{
+        margin-right: 5px;
+        margin-bottom: 0px;
+    }
+    form>legend{
+        font-size: 36px !important;
+        font-weight: 500;
+    }
+    span.navmenu{
+        width: 35px;
+        height: 24px;
+        color: #4C3E9E;
+        z-index: 100;
+    }
+    span.closeNav{
+        width: 35px;
+        height: 24px;
+        position: absolute;
+        right: 0px;
+    }
+}
+@media (min-width: 992px){
+    span.navmenu, span.closeNav{
+        display: none;
+    }
+}

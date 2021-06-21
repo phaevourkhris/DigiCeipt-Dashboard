@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+@import url("navigation.css");
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 400;
+    min-width: 260px;
+}
+
+.menu-bar {
+    margin-bottom: 0!important;
+    padding: 0 5vw;
+}
+
+.logo-img,
+.logo-name{
+    background: white;
+}
+
+.logo-name{
+    color: #4C3E9E;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    margin:0 auto!important;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.nav,
+.form{
+    width: 100%
+}
+
+.form {
+    
+    margin-top: 1.5rem;
+    
+}
+
+.form-control {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.btn1 {
+    width: 100%;
+    margin-top: 35px;
+    height: 40px;
+    border: solid .25px;
+    background-color: #4C3E9E;
+    color: #fff;
+    border-radius: 20px;
+    transition: transform .5s;
+}
+
+.btn1:hover,
+.btn1:active{
+    color: white;
+    background: #3d3180;
+    transform: scale(.85);
+}
+
+.google,
+.facebook{
+    margin-top: px;
+    height: 35px;
+    border: solid .25px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding-left: 1rem;
+}
+
+.google {
+    color:#F90404;
+}
+
+.facebook {
+    color:#1511EE;
+    margin-left: 0;
+}
+
+.pass {
+    text-decoration: none;
+    color: #4C3E9E;
+}
+
+.log-in {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sign-up {
+    text-decoration: none;
+    color: #4C3E9E;
+}
+
+h6 {
+    color:rgba(0, 0, 0, 0.57);
+    margin-top: 1rem;
+}
+
+.remember-me {
+    margin-top: 15px;
+    font-size:.75rem;
+}
+
+#checkbox{
+    margin-right: 2px;
+}
+
+.heading {
+    color: #4C3E9E;
+    padding-top: 1rem;
+    font-weight: 500;
+}
+
+p:before,
+p:after {
+  background-color: rgba(0, 0, 0, 0.57);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  min-width: 25%;
+}
+
+
+.input-field {
+    border: none;
+    margin: 0;
+}
+
+.form-field {
+    display: flex;
+    border: 1px solid rgba(76, 62, 158, 0.57);
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-radius: 7px;
+    padding-left: .5rem;
+    width: 100%; 
+}
+
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .form-field-g,
+  .form-field-f {
+    width: 7.6rem;
+    margin: 0 auto 20px;
+    border-radius: .5rem;
+    padding-left: .5rem;   
+}
+
+.form-field-g {
+    border: 1px solid #F90404;
+}
+
+.form-field-f {
+    border: 1px solid #1511EE;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    color: #C4C4C4;
+
+}
+
+.fa-facebook-f {
+    color: #1511EE;
+}
+
+.login-btn{
+    width: 100%;
+}
+.img{
+    width: 50%;
+    margin-right:0;
+}
+
+.img img{
+    width: 100%;
+}
+
+.left{
+    padding:1rem;
+}
+
+.log-in span{
+    padding: 0 10px;
+}
+
+/* Responsiveness */
+@media screen and (min-width:768px){
+    .cont{
+        flex-direction: row-reverse!important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0 0 0!important;
+    }
+
+    .left{
+        width: 45%!important;
+        padding: 0 2rem;
+    }
+
+    .left .nav{
+        flex-direction: column!important;
+        align-items: flex-start!important;
+    }
+    .img{
+        width: 50%!important;
+    }
+
+    .img img{
+        margin-left: 3rem;
+    }
+
+    .button{
+        flex-direction: row!important;
+        justify-content: space-around!important;
+        align-items: center!important;
+    }
+}

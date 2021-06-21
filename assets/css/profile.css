@@ -1,0 +1,10 @@
+@import url('create-customer.css');
+.fa-edit {
+    color: var(--purple);
+}
+#receipt-rectangle{
+    border: 1px solid var(--purple);
+    border-radius: none;
+    padding: 5px 10px;
+    width: 30px;
+}

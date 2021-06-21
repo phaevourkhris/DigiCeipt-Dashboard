@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+@import url("navigation.css");
+
+:root {
+    --purple: rgba(75, 62, 158, 1);
+    --white: white;
+  }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+}
+
+
+.container-outer::before{
+    content: " ";
+    padding: 45vw;
+    position: relative;
+    z-index: -1;
+    top: 50px;
+    left: -100px;
+    border-radius: 50%;
+    background:  var(--purple);
+}
+
+.container-outer{
+    /* background:  var(--white); */
+    
+}
+
+.container-md{
+    min-width: 200px;
+    padding: 0 20px;
+}
+
+
+.hero-text-div{
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    padding: 20px;
+}
+
+.heading{
+    color:  var(--purple);
+    font-weight: 500;
+}
+
+.hero-heading{
+    font-size: 1.5rem;
+}
+
+.hero-text{
+    font-size: .8rem;
+}
+
+.gs-btn{
+    background: var(--purple);
+    color: var(--white);
+    width: 100%;
+    /* max-width: 200px; */
+    font-size: .8rem;
+    transition: transform .5s
+}
+
+.gs-btn:hover,
+.gs-btn:active{
+    transform: scale(.85);
+    color: var(--white);
+}
+
+.hero-image img{
+    max-width: 350px;
+    margin:0 auto;
+}
+
+.about-us-heading{
+    font-size: 1.2rem;
+}
+
+.about-us-text p,
+.about-us-text a {
+    font-size: .9rem;
+    width: 95%;
+}
+
+.about-us-text a{
+    color: var(--purple);
+}
+
+.about-us::after{
+    content: "";
+    width: 50px;
+    /* left: 85%; */
+    right: -7px;
+    bottom:0;
+    height: 105px;
+    display: inline-block;
+    /* object-fit: contain; */
+    position: absolute;
+    z-index: 0;
+    background: url(../images/plant.png) no-repeat;
+    background-size: 50px auto;
+}
+
+.slider-heading{
+    font-size: 1rem;
+}
+
+.carousel-item{
+    padding: 0 10%;
+}
+
+.testimonial,
+.name,
+.job{
+    font-size:.7rem;
+    color: black;
+}
+
+.author{
+    width: 7em;
+    margin: 0 auto;
+}
+
+.author-image{
+    width: 40px;
+}
+
+.name,
+.job{
+    margin-bottom: 0;
+}
+
+.carousel-indicators [data-bs-target]{
+    background: rgb(172, 171, 171);
+    width: 10px;
+    height: 10px;
+    border:none;
+    border-radius: 50%;
+}
+.carousel-indicators{
+    top: 100%;
+    margin-top: 25px;
+}
+
+.carousel-indicators .active{
+    background: var(--purple);
+}
+
+#contact-us::before {
+    content: "";
+    width: 120px;
+    right: -7px;
+    bottom: 13%;
+    height: 705px;
+    position: absolute;
+    z-index: 0;
+    background: url(../images/star-shape.png) no-repeat;
+    background-size: 120px auto;
+}
+
+
+#contact-us{
+    background:#ebe9f4;
+    margin-top: 5rem;
+}
+
+.contact-heading{
+    font-size: 1.2rem;
+}
+
+.contact-text{
+    font-size: .9rem;
+}
+
+.form-control{
+    background: #ebe9f4;
+    font-size: .6rem;
+    border: 1px solid rgba(0, 0, 0, 0.92)
+}
+
+.send-btn{
+    max-width: 200px;
+}
+
+.contact-info{
+    min-width:150px;
+    width: 70%;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.contact-details p,
+.social-icons i{
+    font-size: .7rem;
+}
+
+.social-icons i{
+    color: rgba(76, 62, 158, .8);
+    cursor: pointer;
+
+}
+
+/* Responsiveness */
+@media screen and (min-width: 576px) {
+    .container-outer::before{
+        padding: 30vw;
+    }
+
+    .hero-text-div{
+        width:75%;
+        padding-bottom: 40px;
+        margin: 0 auto;
+    }
+
+    .hero-heading{
+        font-size: 1.8rem;
+    }
+    
+    .hero-text{
+        font-size: 1rem;
+    }
+
+    .about-us-heading{
+        font-size: 1.5rem;
+    }
+    
+    .about-us-text p,
+    .about-us-text a {
+        font-size: 1rem;
+        /* width: 95%; */
+    }
+
+    .slider-heading{
+        font-size: 1.2rem;
+    }
+    
+    .author{
+        width: 10em;
+    }
+    
+    .testimonial,
+    .name,
+    .job{
+        font-size: .9rem;
+    }
+
+    #contact-us::before {
+        width: 180px;
+        bottom: 26%;
+        background-size: 180px auto;
+    }
+    .contact-left{
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+    .container-outer::before{
+        padding: 23vw;
+    }
+
+    .container-md{
+        padding: 0;
+    }
+
+    .hero-section,
+    .about-us,
+    .contact-container{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-text-div{
+        width: 40%;
+        padding-bottom: 20px;
+        margin-bottom: 0!important;
+    }
+
+    .hero-image{
+        width: 50%!important;
+    }
+
+    .hero-image img{
+        max-width: 65%;
+    }
+
+    .about-us{
+        padding-bottom: 100px!important;
+        margin-bottom: 5rem!important;
+    }
+    .about-us-img{
+        display:block!important;
+        width: 30%
+    }
+
+    .about-us-img img{
+        width: 100%;
+    }
+
+    .about-us-text{
+        width: 50%;
+    }
+
+    .about-us::after{
+        content: "";
+        width: 80px;
+        bottom: -40px;
+        height: 200px;
+        position: absolute;
+        z-index: 0;
+        background: url(../images/plant.png) no-repeat;
+        background-size: 80px auto;
+    }
+
+    .carousel-inner{
+        width: 80%!important;
+        margin: 0 auto!important;
+    }
+
+    .slider-heading{
+        font-size: 1.5rem;
+        margin-bottom: 3rem!important;
+    }
+    
+    
+    .testimonial,
+    .name,
+    .job{
+        font-size: 1.1rem;
+    }
+
+    .author{
+        width: 12em;
+    }
+
+    .carousel-indicators{
+        margin-top: 3rem;
+    }
+    
+    #contact-us::before{
+        content: "";
+        width: 155px;
+        bottom: 7%;
+        background-size: 155px auto;
+    }
+
+    #contact-us{
+        margin-top: 7rem;
+    }
+
+    .contact-left{
+        width: 40%;
+    }
+
+    .contact-info{
+        width: 35%;
+    }
+
+    .social-icons{
+        margin-right: 40px;
+    }
+}

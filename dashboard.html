@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/dashboard.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <span class="material-icons closeNav">
+                close
+                </span>
+            <img src="assets/images/Ellipse 2.png">
+            <h1>Shopit.ng</h1>
+            <ul>
+                <Li><a href="index.html"><img src="assets/images/profile.png" class="icon">Profile</a></Li>
+                <Li class="active"><a><img src="assets/images/dashboard.png" class="icon">Dashboard</a></Li>
+                <Li><a href="create-customer.html"><img src="assets/images/customers.png" class="icon">Customers</a></Li>
+                <Li><a><img src="assets/images/history.png" class="icon">History</a></Li>
+                <Li><a><img src="assets/images/drafts.png" class="icon">Drafts</a></Li>
+                <Li><a><img src="assets/images/settings.png" class="icon">Settings</a></Li>
+                <li><a><img src="assets/images/logout.png" class="icon">Logout</a></li>
+            </ul>
+
+            <div>
+                <p>Available Receipts</p>
+                <progress max="1" value="0.8"></progress>
+                <p>80 of 100</p>
+            </div>
+        </nav>
+
+        <section>
+            <span class="material-icons navmenu">
+                menu
+                </span>
+            <div>
+                <input type="search">
+                <span class="material-icons">
+                    search
+                </span>
+            </div>
+
+
+            <form>
+                <legend>Create Receipt</legend>
+                <div>
+                    <p>Kindly fill all fields for customer’s receipt</p>
+                    <button>Existing Customer</button>
+                </div>
+                
+                <label>Customer’s Name</label>
+                <input type="text" class="fullWidth"/>
+
+                <div>
+                    <div>
+                        <label>Customer’s Email</label>
+                        <input type="email" class="halfWidth"/>
+                    </div>
+                    <div>
+                        <label>Phone Number</label>
+                        <input type="number" class="halfWidth"/>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        <label>Purpose of payment</label>
+                        <input type="text" class="halfWidth"/>
+                    </div>
+                    <div>
+                        <label>Quantity</label>
+                        <input type="number" class="halfWidth"/>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div>
+                    <label>Currency</label>
+                    <select>
+                        <option>Naira?</option>
+                    </select>
+                    </div>
+                    <div>
+                    <label>Amount</label>
+                    <input type="number" class="halfWidth"/>
+                    </div>
+                </div>
+                </div>
+
+                <div>
+                    <div>
+                <label><input type="checkbox" />Schedule for later</label>
+                <input type="date" class="halfWidth" disabled/>
+                </div>
+                <div>
+                <label>Status</label>
+                <select>
+                    <option>Paid</option>
+                    <option>Dunno</option>
+                </select>
+            </div>
+                </div>
+
+                <div class="Buttons">
+                <button class="whitebg">Save</button>
+                <button class="purplebg">Send</button>
+            </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="assets/js/dashboard.js"></script>
+</html>

@@ -1,0 +1,158 @@
+.side-bar{
+    width: 345px;
+    background: var(--purple);
+    color: var(--white);
+    position: fixed;
+    left:0;
+    top:0;
+    height: 100%;
+    z-index: 100;
+}
+
+#nav-toggle{
+    display: none;
+}
+
+.close{
+    top: 20px;
+    left: -3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.account-info{
+    text-align: center;
+}
+
+.account-info::after{
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -30px;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+}
+
+.account-name{
+    font-size: 1.2rem;
+}
+
+.nav-link{
+    color:var(--white);
+    padding-left: 3rem;
+    /* padding-left: 15vw; */
+    width: 80%;
+    font-weight: 500;
+}
+
+.active,
+.nav-link:hover{
+    background: var(--white);
+    color:var(--purple);
+    border-radius: 0 10px 10px 0;
+}
+
+.side-menu-icons{
+    margin-right: 25px;
+    width: 16px;
+}
+
+.side-menu-icons img{
+    width: 16px;
+}
+
+.receipt-count{
+    width: 70%;
+    margin-left: 3rem;
+}
+
+.progress-bar{
+    background: #C4C4C4;
+    width: 80%;
+}
+
+#nav-toggle:checked + .side-bar{
+    width: 70px;
+    transition: width 300ms;
+    padding-top: 100px!important;
+}
+
+#nav-toggle:checked + .side-bar .nav .nav-link{
+    padding-left: 2rem;
+}
+
+#nav-toggle:checked + .side-bar .account-info,
+#nav-toggle:checked + .side-bar .nav .nav-link span,
+#nav-toggle:checked + .side-bar .receipt-count{
+    /* width: 70px; */
+    display: none;
+}
+
+#nav-toggle:checked ~ .main-content{
+    margin-left: 70px;
+    padding: .5rem 3rem;
+}
+
+@media screen and (max-width: 992px){
+    .side-bar{
+        width: 70px;
+        transition: width 300ms;
+        padding-top: 100px!important;
+    }
+    
+    .side-bar .nav .nav-link{
+        padding-left: 2rem;
+    }
+    
+    .side-bar .account-info,
+    .side-bar .nav .nav-link span,
+    .side-bar .receipt-count{
+        display: none;
+    }
+
+    #nav-toggle:checked + .side-bar .close{
+        left: 3rem!important;
+    }
+
+    #nav-toggle:checked + .side-bar{
+        width: 375px;
+        transition: width 300ms;
+        padding-top: 1rem!important;
+    }
+    
+    #nav-toggle:checked + .side-bar .nav .nav-link{
+        padding-left: 3rem;
+    }
+    
+    #nav-toggle:checked + .side-bar .account-info{
+        display: block;
+    }
+
+    #nav-toggle:checked + .side-bar .nav .nav-link span,
+    #nav-toggle:checked + .side-bar .receipt-count{
+        display: inline-block;
+    }
+    
+}
+
+@media screen and (max-width: 576px){
+    .side-bar{
+        left: -100%!important;
+    }
+
+    #nav-toggle:checked + .side-bar{
+        left: 0!important;
+    }
+}
+
+
+@media screen and (max-width: 375px){
+    #nav-toggle:checked + .side-bar{
+        width: 100%;
+    }
+}
