@@ -17,35 +17,36 @@ body{
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 400;
     min-height: 100vh;
+    min-width: 300px;
 }
 
 
-.container-outer::before{
-    content: " ";
-    padding: 45vw;
-    position: relative;
-    z-index: -1;
-    top: 50px;
-    left: -100px;
+.logo::before{
+    content: '';
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
     border-radius: 50%;
-    background:  var(--purple);
-}
-
-.container-outer{
-    /* background:  var(--white); */
-    
+    top: -50px;
+    left: -80px;
+    z-index: -1;
+    background-color: var(--purple);
 }
 
 .container-md{
-    min-width: 200px;
-    padding: 0 20px;
+    max-width: 1200px;
 }
 
+.hero{
+    width: 90%;
+    margin: 0 auto;
+}
 
 .hero-text-div{
-    width: 100%;
-    background: rgba(255, 255, 255, 1);
-    padding: 20px;
+    width: 90%;
 }
 
 .heading{
@@ -54,41 +55,53 @@ body{
 }
 
 .hero-heading{
-    font-size: 1.5rem;
+    width:77%;
+    font-size: 1.3rem;
+    padding-right: 5px;
 }
 
 .hero-text{
-    font-size: .8rem;
+    font-size: .9rem;
+    letter-spacing: 0.03em;
 }
+
+.hero-image img,
+.about-us-img img{
+    max-width: 350px;
+    width: 60%;
+}
+
 
 .gs-btn{
     background: var(--purple);
     color: var(--white);
-    width: 100%;
-    /* max-width: 200px; */
+    width: 60%;
+    margin-left: 5%;
+    max-width: 200px;
     font-size: .8rem;
-    transition: transform .5s
+    transition: transform .5s;
+    border-radius: 12px;
 }
 
 .gs-btn:hover,
 .gs-btn:active{
     transform: scale(.85);
     color: var(--white);
+    background: #3b307c;
 }
 
-.hero-image img{
-    max-width: 350px;
-    margin:0 auto;
-}
 
+#about-us{
+   background:#ebe9f4;
+}
 .about-us-heading{
     font-size: 1.2rem;
 }
 
-.about-us-text p,
-.about-us-text a {
+.about-us-text p{
     font-size: .9rem;
     width: 95%;
+    letter-spacing: 0.085em
 }
 
 .about-us-text a{
@@ -98,12 +111,10 @@ body{
 .about-us::after{
     content: "";
     width: 50px;
-    /* left: 85%; */
     right: -7px;
     bottom:0;
     height: 105px;
     display: inline-block;
-    /* object-fit: contain; */
     position: absolute;
     z-index: 0;
     background: url(../images/plant.png) no-repeat;
@@ -123,6 +134,10 @@ body{
 .job{
     font-size:.7rem;
     color: black;
+}
+
+.testimonial{
+    letter-spacing: 0.145em;
 }
 
 .author{
@@ -158,9 +173,9 @@ body{
 #contact-us::before {
     content: "";
     width: 120px;
-    right: -7px;
-    bottom: 13%;
-    height: 705px;
+    right: 0;
+    top: -170px;
+    height: 300px;
     position: absolute;
     z-index: 0;
     background: url(../images/star-shape.png) no-repeat;
@@ -183,24 +198,34 @@ body{
 
 .form-control{
     background: #ebe9f4;
-    font-size: .6rem;
-    border: 1px solid rgba(0, 0, 0, 0.92)
+    font-size: .8rem;
+    border: 1px solid rgba(0, 0, 0, 0.57)
+}
+
+input[type="text"],
+input[type="email"]{
+    height: 40px;
+}
+
+textarea{
+    height: 100px;
 }
 
 .send-btn{
     max-width: 200px;
+    margin-left: 0;
 }
 
 .contact-info{
     min-width:150px;
-    width: 70%;
+    width: 80%;
     height: 100px;
     margin: 0 auto;
 }
 
 .contact-details p,
 .social-icons i{
-    font-size: .7rem;
+    font-size: .9rem;
 }
 
 .social-icons i{
@@ -209,167 +234,397 @@ body{
 
 }
 
-/* Responsiveness */
-@media screen and (min-width: 576px) {
-    .container-outer::before{
-        padding: 30vw;
-    }
-
-    .hero-text-div{
-        width:75%;
-        padding-bottom: 40px;
-        margin: 0 auto;
-    }
-
-    .hero-heading{
-        font-size: 1.8rem;
-    }
-    
-    .hero-text{
-        font-size: 1rem;
-    }
-
-    .about-us-heading{
-        font-size: 1.5rem;
-    }
-    
-    .about-us-text p,
-    .about-us-text a {
-        font-size: 1rem;
-        /* width: 95%; */
-    }
-
-    .slider-heading{
-        font-size: 1.2rem;
-    }
-    
-    .author{
-        width: 10em;
-    }
-    
-    .testimonial,
-    .name,
-    .job{
-        font-size: .9rem;
-    }
-
-    #contact-us::before {
-        width: 180px;
-        bottom: 26%;
-        background-size: 180px auto;
-    }
-    .contact-left{
-        width: 70%;
-        margin: 0 auto;
-    }
-    
+.chatbot-div .top{
+    width: 90%;
 }
 
-@media screen and (min-width: 768px){
-    .container-outer::before{
-        padding: 23vw;
+.chatbot-div-right .title{
+    color: var(--purple);
+    font-size: 1.3rem;
+}
+
+.chatbot-div-right p{
+    letter-spacing: 0.13em;
+    font-size: 1rem;
+}
+
+.chatbot-img{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.chatbot-img img{
+    width: 100%;
+}
+
+.buttons{
+    width: 100%;
+}
+
+.btns{
+    width: 100%;
+}
+
+.btns button{
+    background: black;
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.btns button i{
+    width: 40%;
+}
+
+.fa-apple{
+    font-size: 35px;
+    margin-right:10px;
+}
+
+.google-play img{
+    width: 35px;
+    margin-right: 10px;
+}
+
+.btns button p{
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+footer{
+    background: var(--purple);
+}
+
+.footer-cont{
+    width: 95%;
+}
+
+.footer-cont .left{
+    width: 50%;
+}
+
+.footer-cont .right{
+    width: 45%;
+}
+
+.quick-links{
+    width: 100%;
+}
+
+.quick-links nav p{
+    color: var(--white);
+    font-size: .6rem;
+}
+
+.quick-links nav .nav-link{
+    color: rgb(173, 173, 173);
+    font-size: .6rem;
+}
+
+footer .logo-name{
+    color: var(--white);  
+    font-size: 1rem; 
+}
+
+.left .logo-img{
+    width: 30px;
+}
+
+.right i{
+    color: var(--white);
+    font-size: .6rem;
+}
+
+.right p{
+    text-align: right;
+    color: var(--white);
+    font-size: .6rem;
+}
+
+/* Responsiveness */
+
+@media screen and (min-width: 768px) {
+    .logo::before{
+        width: 374px;
+        height: 374px;
+        top: -176px;
+        left: -283px;
     }
 
-    .container-md{
-        padding: 0;
-    }
+    /* .her0-section{
+        position:relative;
+    } */
 
-    .hero-section,
-    .about-us,
-    .contact-container{
-
+    .hero{
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .hero-text-div{
-        width: 40%;
-        padding-bottom: 20px;
-        margin-bottom: 0!important;
+        width: 44%;
+        /* margin-top: 30px; */
+        
+    }
+
+    .hero-heading{
+        font-size: 2.2rem;
+        /* padding: 0; */
+        width: 100%;
+    }
+
+    .hero-text{
+        font-size: 1.1rem;
+        margin-bottom: 3.5rem;
     }
 
     .hero-image{
         width: 50%!important;
+        text-align:right;
     }
-
+    
     .hero-image img{
-        max-width: 65%;
+        width:85%;
     }
 
-    .about-us{
-        padding-bottom: 100px!important;
-        margin-bottom: 5rem!important;
-    }
-    .about-us-img{
-        display:block!important;
-        width: 30%
+    .hero-btn{
+        display: none;
+        /* margin-top: -170px; */
     }
 
-    .about-us-img img{
-        width: 100%;
+    .hero-text-btn{
+        display: block!important;
+    }
+
+    .gs-btn{
+        font-size: 1.2rem;
+    }
+
+    #about-us{
+        width: 90%;
+        background: var(--white);
+        -webkit-box-shadow: 1px 1px 10px 3px #ccc; 
+        -moz-box-shadow:    1px 1px 10px 3px #ccc;  
+        box-shadow:         1px 1px 10px 3px #ccc; 
+        margin: 0 auto 6rem!important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5rem 1.5rem 12rem!important;
     }
 
     .about-us-text{
+        order: 2;
         width: 50%;
     }
-
-    .about-us::after{
-        content: "";
-        width: 80px;
-        bottom: -40px;
-        height: 200px;
-        position: absolute;
-        z-index: 0;
-        background: url(../images/plant.png) no-repeat;
-        background-size: 80px auto;
-    }
-
-    .carousel-inner{
-        width: 80%!important;
-        margin: 0 auto!important;
-    }
-
-    .slider-heading{
+    
+  .heading{
         font-size: 1.5rem;
-        margin-bottom: 3rem!important;
     }
-    
-    
+
+    .about-us-text p,
     .testimonial,
     .name,
-    .job{
-        font-size: 1.1rem;
+    .job,
+    .contact-text,
+    .contact-details p,
+    .social-icons i{
+        font-size: 1.2rem;
+    }
+
+    .about-us-img{
+        text-align: left!important;
+    }
+
+    .about-us-img img{
+        width:80%;
+    }
+
+    
+    .about-us::after{
+        content: "";
+        width: 100px;
+        right: -7px;
+        bottom:0;
+        height: 205px;
+        background-size: 100px auto;
     }
 
     .author{
         width: 12em;
     }
 
-    .carousel-indicators{
-        margin-top: 3rem;
+    .author-image{
+        width: 60px;
+    }
+
+    .contact-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-container{
+        width: 90%;
     }
     
-    #contact-us::before{
-        content: "";
-        width: 155px;
-        bottom: 7%;
-        background-size: 155px auto;
-    }
-
-    #contact-us{
-        margin-top: 7rem;
-    }
-
     .contact-left{
-        width: 40%;
+        width: 55%;
     }
 
+    .contact-heading,
+    .contact-text{
+        margin-bottom: 1rem;
+    }
+
+    .contact-form{
+        margin: 1rem 0!important;
+    }
+
+
+    input[type="text"], input[type="email"]{
+        height: 50px;
+        margin-bottom: 1rem!important;
+    }
+
+    textarea.form-control{
+        height: 150px;
+        margin-bottom: 2rem!important;
+    }
+
+    .send-btn{
+        max-width: 300px;
+    }
+   
     .contact-info{
-        width: 35%;
+        width: 30%;
+        height: 378px;
+        min-width: 250px;
     }
 
+    .contact-details,
     .social-icons{
-        margin-right: 40px;
+        justify-content: flex-end!important;
     }
+
+    .contact-details p{
+        margin-top: 40px!Important;
+    }
+
+    .social-icons i{
+        margin-top: 30px;
+    }
+
+    .chatbot-div{
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+    .chatbot-div .top{
+        display: flex;
+    }
+
+    .chatbot-div-right{
+        order: 2;
+        width: 50%;
+        text-align: left;
+    }
+
+    .chatbot-div-right .title{
+        color: black;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 1.8rem!important;
+    }
+
+    .chatbot-div-right p.mb-3{
+        font-size: 1.2rem;
+        width: 90%;
+        margin-bottom: 2.5rem!important;
+    }
+
+    .chatbot-div .top .buttons{
+        display: block!important;
+    }
+
+    .chatbot-create{
+        max-width: 250px;
+        min-width: 186px;
+        font-size: 1rem;
+        border-radius: 12px 12px 12px 0;
+    }
+
+    .btns button:first-child{
+        margin-right: 3rem!important;
+    }
+
+    .btns button i{
+        width: 20%;
+        font-size: 25px;
+    }
+
+    .btns button p{
+       font-size: .8rem;
+    }
+
+    .google-play img{
+        width: 24px;
+    }
+
+    .chatbot-img{
+        order: 1;
+        width: 30%;
+        text-align: left;
+    }
+
+    .chatbot-img img{
+        width: 80%;
+    }
+
+    .bottom{
+        display: none;
+    }
+
+    .footer-cont{
+        width: 90%;
+    }
+
+    .quick-links{
+        width: 80%;
+    }
+
+    .quick-links nav p,
+    .quick-links nav .nav-link{
+        font-size: 1rem;
+    }
+
+    .quick-links nav:last-child{
+        order: -1;
+    }
+
+    .left .logo{
+        display:none!important;
+    }
+
+    .footer-para{
+        display: block!important;
+        color: var(--white);
+        letter-spacing: 0.165em;
+    }
+
+    .right .logo{
+        display: flex!important;
+    }
+
+    .right .logo-name{
+        font-size: 1.5rem;
+        letter-spacing: 0.165em;
+    }
+
+    .right p{
+        font-size: 1rem;
+        letter-spacing: 0.2em;
+    }
+
 }

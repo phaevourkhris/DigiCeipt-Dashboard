@@ -11,8 +11,8 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/create-customer.css">
-    <title>Dashboard | Customers</title>
+    <link rel="stylesheet" href="./assets/css/no-history.css">
+    <title>Dashboard | History</title>
 </head>
 <body>
     <div class="">
@@ -27,9 +27,9 @@
             </label>
             <nav class="nav flex-column menu mb-3">
                 <a class="nav-link mb-2" href="profile.html"><i class="far fa-user side-menu-icons"></i><span>Profile</span></a>
-                <a class="nav-link mb-2" href="create-receipt.html"><i class="side-menu-icons fas fa-tachometer-alt"></i><span>Dashboard</span></a>
-                <a class="nav-link mb-2 active" aria-current="page" href="no-customer.html"><i class="fas fa-users side-menu-icons"></i><span>Customers</span></a>
-                <a class="nav-link mb-2" href="no-history.html"><i class="fas fa-history side-menu-icons"></i><span>History</span></a>
+                <a class="nav-link mb-2" href="dashboard.html"><i class=" side-menu-icons"><img src="./assets/images/dashboard-icon.png" alt=""></i><span>Dashboard</span></a>
+                <a class="nav-link mb-2" href="no-customer.html"><i class="fas fa-users side-menu-icons"></i><span>Customers</span></a>
+                <a class="nav-link mb-2 active" aria-current="page" href="#"><i class="fas fa-history side-menu-icons"></i><span>History</span></a>
                 <a class="nav-link mb-2" href="#"><i class="fas fa-briefcase side-menu-icons"></i><span>Drafts</span></a>
                 <a class="nav-link mb-2" href="#"><i class="fas fa-cog side-menu-icons"></i><span>Settings</span></a>
                 <a class="nav-link mb-2" href="#"><i class="fas fa-sign-out-alt side-menu-icons"></i><span>Log out</span></a>
@@ -51,17 +51,66 @@
                     </label>
                     <span class="searchbar d-flex justify-content-between"><input type="search" placeholder="Search" name="search" id="search"><i class="fas fa-search"></i></span>
                 </div>
-                <h3 class="heading">Customers</h3>
+                <h3 class="heading">History</h3>
             </div>
             <div class="divider w-100"></div>
-            <section class="text-end">
-                <a href="create-customer.html" class="btn btn-primary create-btn mb-5 new" type="submit"><span style="margin-right: 10px;">+</span>New Customer</a>
-                <div class="empty d-flex flex-column align-items-center justify-content-between">
-                    <p class="para mb-3">Oops! no customer has been added</p>
-                    <img class="mb-3" src="./assets/images/empty.png" alt="illustration of empty" style="max-width: 400px; width: 100%;">
-                </div>
-            </section>
-            
+
+            <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link active"
+                    id="ex3-tab-1"
+                    data-mdb-toggle="tab"
+                    href="#ex3-tabs-1"
+                    role="tab"
+                    aria-controls="ex3-tabs-1"
+                    aria-selected="true"
+                    >All</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    id="ex3-tab-2"
+                    data-mdb-toggle="tab"
+                    href="#ex3-tabs-2"
+                    role="tab"
+                    aria-controls="ex3-tabs-2"
+                    aria-selected="false"
+                    >Paid</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link"
+                    id="ex3-tab-3"
+                    data-mdb-toggle="tab"
+                    href="#ex3-tabs-3"
+                    role="tab"
+                    aria-controls="ex3-tabs-3"
+                    aria-selected="false"
+                    >Pending</a
+                  >
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="ex3-tab-3"
+                      data-mdb-toggle="tab"
+                      href="#ex3-tabs-3"
+                      role="tab"
+                      aria-controls="ex3-tabs-3"
+                      aria-selected="false"
+                      >Deleted</a
+                    >
+                  </li>
+              </ul>
+              
+
+            <div class="empty d-flex flex-column align-items-center justify-content-between">
+                <p class="para mb-3">Oops! we couldn't find any history for receipts.</p>
+                <img class="mb-3" src="./assets/images/empty.png" alt="illustration of empty" style="max-width: 400px; width: 100%;">
+            </div>
         </main>
     </div>
     <script
@@ -69,5 +118,6 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/dashboard-menu.js"></script>
 </body>
 </html>

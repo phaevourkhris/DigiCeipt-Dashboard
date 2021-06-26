@@ -1,10 +1,14 @@
 @import url('create-customer.css');
-.fa-edit {
+
+form label{
     color: var(--purple);
 }
-#receipt-rectangle{
-    border: 1px solid var(--purple);
-    border-radius: none;
-    padding: 5px 10px;
+
+.input-fields{
+    border: 1px solid rgba(0, 0, 0, 0.57);
+}
+#colorpicker{
+    border: 1px solid rgba(0, 0, 0, 0.57);
+    height: 30px;
     width: 30px;
 }

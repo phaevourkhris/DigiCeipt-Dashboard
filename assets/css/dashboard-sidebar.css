@@ -1,5 +1,5 @@
 .side-bar{
-    width: 345px;
+    width: 300px;
     background: var(--purple);
     color: var(--white);
     position: fixed;
@@ -7,6 +7,7 @@
     top:0;
     height: 100%;
     z-index: 100;
+    border-radius: 0 20px 20px 0;
 }
 
 #nav-toggle{

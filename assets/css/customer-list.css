@@ -1,0 +1,87 @@
+@import url("create-customer.css");
+
+
+.table{
+    background: #fdfdfd!important;
+}
+
+tbody{
+    border: .8px solid black!important;
+}
+
+thead td{
+    border: 1px solid var(--white);
+    border-collapse: collapse;
+    background-color: var(--purple)!Important;
+    color: var(--white);
+}
+
+thead td:first-child{
+    border-top-left-radius:10px;
+}
+thead td:last-child{
+    border-top-right-radius:10px;
+}
+
+tbody tr:hover{
+    background: rgba(76, 62, 158, 0.1);
+}
+
+.stretched-link,
+.stretched-link:hover{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+.stretched-link::after{
+    right: 5%!important;
+}
+
+
+tr td:not(:last-child){
+    text-align: center;
+    width: 19%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+
+tr td:last-child{
+    text-align: center;
+    width: 5%;
+    display: inline-block;
+}
+
+td{
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 10px 10px!important;
+}
+
+td i{
+    color: red;
+    cursor:pointer;
+}
+
+.modal-body button{
+    width: 44%;
+    border-radius: 10px;
+    font-size: .9rem;
+}
+
+.modal-body .btn-light{
+    border: 1px solid red;
+}
+.modal-body .btn-light:hover{
+    background: var(--purple);
+    border: none;
+    color: var(--white);
+}
+
+.modal-body .btn-primary{
+    background: var(--purple);
+}
+.modal-body .btn-primary:hover{
+    background: #3b307c;
+}

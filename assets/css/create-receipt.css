@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0em;
+}
+input,
+button {
+  border-style: none;
+}
+
+form {
+  margin-top: 50px;
+}
+form > legend {
+  font-family: Red Hat Display;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  color: #4c3e9e;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #4c3e9e;
+  margin-bottom: 60px;
+}
+form > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+form > div > div {
+  width: 40%;
+}
+form > div > p {
+  font-family: Red Hat Display;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  color: #000000c9;
+}
+form > div > button {
+  font-family: Red Hat Display;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.035em;
+  text-align: center;
+  width: 250px;
+  height: 72px;
+  background: #4c3e9e;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  color: #ffffff;
+}
+form label {
+  font-family: Red Hat Display;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+form input,
+select {
+  margin-bottom: 50px;
+  height: 50px;
+  border: 1px solid #4c3e9e;
+  border-radius: 10px;
+  width: 100%;
+}
+input[type="checkbox"] {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 40px;
+}
+form button {
+  font-family: Red Hat Display;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.035em;
+  text-align: center;
+  height: 72px;
+  width: 337px;
+  border-radius: 10px;
+  box-shadow: 3px 4px 4px 0px #00000040;
+}
+.whitebg {
+  background: #ffffff;
+  color: #4c3e9e;
+  border: 1px solid #000000;
+  margin-right: 70px;
+}
+.purplebg {
+  color: #ffffff;
+  background: #4c3e9e;
+}
+div.Buttons {
+  position: absolute;
+  right: 0px;
+}
+input[type="checkbox"] {
+  margin-bottom: 0px;
+}
+input:checked ~ input[type="date"] {
+  pointer-events: visible;
+}
+
+@media (max-width: 992px) {
+  form > div > button {
+    width: 120px;
+  }
+}

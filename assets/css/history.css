@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+@import url('dashboard-sidebar.css');
+
+
+:root{
+    --purple: #4c3e9e;
+    --white: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 400;
+}
+
+.main-content{
+    transition: margin-left 300ms;
+    margin-left: 345px;
+    padding: .5rem 6rem;
+    min-width: 250px;
+}
+
+.header{
+    height: 85px;
+}
+
+.hamburger{
+    font-size: 1.5rem;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.heading{
+    color: var(--purple);
+    font-size: 1.5rem;
+}
+
+.searchbar{
+    align-self: flex-end;
+    border: 1px solid var(--purple);
+    border-radius: 19px;
+    padding: 1px;
+    width: 40%;
+    max-width: 250px;
+    min-width: 150px;
+}
+
+#search{
+    border:none;
+    padding: 3px;
+    width:80%;
+    height: 22px;
+    margin: 0 10px 0 20px;
+    outline:none;
+    font-size: .7rem;
+}
+
+.fa-search{
+    background: var(--purple);
+    color: #fff;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.divider{
+    background: var(--purple);
+    height: 2px;
+    margin-bottom: 2rem;
+}
+
+form{
+    color: rgba(0, 0, 0, 70%);
+}
+
+.title{
+    font-size: 1.2rem;
+}
+
+label{
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+.input-fields{
+    border: 1px solid var(--purple);
+    border-radius: 8px;
+    padding: 5px 30px;
+    outline: none;
+}
+
+.group>*{
+    width: 40%;
+}
+
+.table{
+    background: #fdfdfd!important;
+}
+
+tbody{
+    /* border: .8px solid black!important; */
+    border-top: .8px solid black!important;
+    border-left: .8px solid black!important;
+    border-bottom: .8px solid black!important;
+    border-right: .5px solid black!important;
+}
+
+thead td{
+    border: 1px solid var(--white);
+    border-collapse: collapse;
+    background-color: var(--purple)!Important;
+    color: var(--white);
+}
+
+thead td:first-child{
+    border-top-left-radius:10px;
+}
+thead td:last-child{
+    border-top-right-radius:10px;
+}
+
+tbody tr:hover{
+    background: rgba(76, 62, 158, 0.1);
+}
+
+.stretched-link,
+.stretched-link:hover{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+.stretched-link::after{
+    right: 5%!important;
+}
+
+
+tr td:not(:last-child){
+    text-align: center;
+    width: 19%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+
+tr td:last-child{
+    text-align: center;
+    width: 5%;
+    display: inline-block;
+}
+
+td{
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 10px 10px!important;
+}
+
+td i{
+    color: red;
+    cursor:pointer;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #4c3e9e!important;
+    border-bottom: solid 5px #4c3e9e!important;
+    border-radius: 0!important;
+    border-width: 50%!important;
+}
+
+.nav .nav-tabs .nav-link {
+    color: #4c3e9e;
+    margin-bottom: -1px;
+    background: 0 0;
+    /* border: 1px solid transparent; */
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+a#ex3-tab-1,
+a#ex3-tab-2,
+a#ex3-tab-3,
+#ex3-tabs-4{
+    color: rgba(0, 0, 0, 0.4);
+    border: none;
+    padding-left: 0;
+}
+
+.pending {
+    color: #F90404;
+}
+
+.paid {
+    color: #39A249;
+}
+
+.modal-content{
+    height: 350px;
+    border-radius: 30px;
+}
+
+.modal-body{
+    height:150px;
+    font-size: 1.3rem;
+    color:var(--purple);
+    text-align: center;
+}
+
+#prompt {
+    margin-top: 5rem;
+}
+
+.fa-check-circle{
+    font-size: 6rem;
+}
+
+#receipt-delete {
+    margin-bottom: 5rem;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 3.5rem;
+}
+
+.modal-btn {
+    background-color: var(--purple);
+    width: 30%;
+    padding: 5px 10px;
+    border: solid .5px var(--purple);
+    border-radius: 10px;
+    transition: transform .5s;
+}
+
+.btn-red {
+    background-color: #fff;
+    border: solid .5px #F90404;
+}
+
+.btn-red:hover {
+    background-color: var(--purple);
+    transform: scale(.85);
+}
+
+.btn-primary:hover {
+    background-color: #3d3180;;
+    transform: scale(.85);
+}
+
+.delete-receipt-deleted {
+    color: #4c3e9e;
+}

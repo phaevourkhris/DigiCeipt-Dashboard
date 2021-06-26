@@ -15,6 +15,17 @@
     <title>Dashboard | Customers</title>
 </head>
 <body>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered justify-content-center">
+            <div class="modal-content d-flex flex-column justify-content-between align-items-center p-3">
+                <a href="customer-list.html" type="button" class="btn-close align-self-end" data-bs-dismiss="modal" aria-label="Close"></a>
+                <div class="modal-body d-flex flex-column justify-content-around align-items-center">
+                    <i class="far fa-check-circle"></i>
+                    <p class="text-center">Customer has been created!</p>
+                </div>
+            </div>       
+        </div>
+    </div>
     <div class="">
         <input type="checkbox" name="" id="nav-toggle">
         <div class="side-bar py-2">
@@ -26,8 +37,8 @@
                 <i class="fas fa-times "></i>
             </label>
             <nav class="nav flex-column menu mb-3">
-                <a class="nav-link mb-2" href="index.html"><i class="far fa-user side-menu-icons"></i><span>Profile</span></a>
-                <a class="nav-link mb-2" href="dashboard.html"><i class=" side-menu-icons"><img src="./assets/images/dashboard-icon.png" alt=""></i><span>Dashboard</span></a>
+                <a class="nav-link mb-2" href="profile.html"><i class="far fa-user side-menu-icons"></i><span>Profile</span></a>
+                <a class="nav-link mb-2" href="create-receipt.html"><i class="side-menu-icons fas fa-tachometer-alt"></i><span>Dashboard</span></a>
                 <a class="nav-link mb-2 active" aria-current="page" href="no-customer.html"><i class="fas fa-users side-menu-icons"></i><span>Customers</span></a>
                 <a class="nav-link mb-2" href="#"><i class="fas fa-history side-menu-icons"></i><span>History</span></a>
                 <a class="nav-link mb-2" href="#"><i class="fas fa-briefcase side-menu-icons"></i><span>Drafts</span></a>
@@ -47,7 +58,7 @@
             <div class="header mb-2 d-flex flex-column justify-content-between align-items-start">
                 <div class="header-top d-flex justify-content-between align-items-center w-100">
                     <label for="nav-toggle">
-                        <i class="fas fa-bars hamburger"></i>
+                        <i class="fas fa-bars hamburger d-none"></i>
                     </label>
                     <span class="searchbar d-flex justify-content-between"><input type="search" placeholder="Search" name="search" id="search"><i class="fas fa-search"></i></span>
                 </div>
@@ -62,7 +73,7 @@
                 <input class="mb-4 input-fields py-1" type="email" name="email" id="">
                 <label class="mb-2" for="">Customer's Address</label>
                 <input class="mb-4 input-fields py-1" type="text" name="address" id="">
-                <div class="group d-flex justify-content-between align-items-end mb-3">
+                <div class="group d-flex justify-content-between align-items-end mb-4">
                     <div class="phone d-flex flex-column">
                         <label class="mb-2" for="phone">Phone Number</label>
                         <input class="mb-4 input-fields py-1" type="number" name="phone" id="">
@@ -75,26 +86,14 @@
                         </select>
                     </div>
                 </div>
-                <button class="btn btn-primary create-btn w-50 mx-auto" data-bs-toggle= "modal" data-bs-target="#staticBackdrop" type="submit">Create</button>
+                <a class="btn btn-primary create-btn w-25 mx-auto" role="button" data-bs-toggle= "modal" data-bs-target="#staticBackdrop">Create</a>
             </form>
-        </main>
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content d-flex flex-column justify-content-between align-items-center p-3">
-                    <button type="button" class="btn-close align-self-end" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="modal-body d-flex flex-column justify-content-between align-items-center">
-                        <i class="far fa-check-circle"></i>
-                        <p>Customer has been created!</p>
-                    </div>
-                </div>       
-            </div>
-        </div>  
+        </main>  
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/dashboard-menu.js"></script>
 </body>
 </html>

@@ -1,64 +1,125 @@
 .logo{
-    /* background: rgba(75, 62, 158, 1); */
     width: 80%;
 }
 
 .logo-img{
     width: 45px;
-    background: rgba(75, 62, 158, 1);
 }
 
 .logo-name{
-    color: var(--white);
-    font-size: 1rem;
+    color: var(--purple);
+    font-size: 1.5rem;
     padding: 0 7px;
     margin-bottom: -5px;
-    background: rgba(75, 62, 158, 1);
+}
+
+.logo-name::first-letter{
+    color: var(--white);
+}
+
+.menu-icon{
+    width: 25px;
+    height: 20px;
+}
+
+.bar-1, .bar-2, .bar-3{
+    height: 4px;
+    background: var(--purple);
+}
+
+.bar-1{
+    width: 100%;
+}
+
+.bar-2{
+    width: 70%;
+}
+
+.bar-3{
+    width: 40%;
+}
+
+.fa-times{
+    color: rgb(148, 147, 147);
+    font-size:20px;
+}
+
+.nav-bar{
+    background: var(--purple);
+    padding: 10px;
+    border-radius: 20px 0 20px 20px;
+    position: absolute;
+    top: 20px;
 }
 
 .menu-item{
     padding:.3rem 0;
     font-size: .7rem;
     font-weight: 500;
-    color: rgb(148, 147, 147);
+    color: rgb(173, 173, 173);
 }
 
 .active,
 .nav-link:hover,
 .menu-icon{
-    color:  var(--purple);
+    color:  var(--white);
     cursor: pointer;
 }
 
-
 @media screen and (min-width: 768px){
-    .menu-icon{
-        display: none;
-    }
-
-    .nav,
     .menu-bar{
         display: flex!important;
-        flex-direction: row!important;
         justify-content: space-between!important;
         align-items: center!important;
         width: 100%;
     }
 
-    .logo{
-        width: 100%;
+    .nav-div,
+    .menu-group{
+        width: 50%;
+        display: flex!important;
+        justify-content: space-between!important;
+        align-items: center!important;
     }
 
     .logo-img{
         width: 60px;
     }
-
+    
     .logo-name{
-        font-size:1.7rem;
-    }
-    .menu-group,
-    .nav-div{
-        width: 50%;
+        font-size: 2rem;
+        padding: 0 7px;
+        margin-bottom: -5px;
     }
 
+    .menu-icon{
+        display: none!important;
+    }
+
+    .nav-bar{
+        position: static;
+        display: flex!important;
+        flex-direction: row!important;
+        justify-content: space-between!important;
+        background: none;
+        width: 100%;
+    }
+
+    .fa-times{
+        display:none
+    }
+
+    .menu-item{
+        font-size: .8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        
+    }
+
+    .active,
+    .nav-link:hover,
+    .menu-icon{
+        color:  var(--purple);
+    }
+ 
 }

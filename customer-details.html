@@ -15,6 +15,17 @@
     <title>Dashboard | Customers</title>
 </head>
 <body>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered justify-content-center">
+            <div class="modal-content d-flex flex-column justify-content-between align-items-center p-3">
+                <button type="button" class="btn-close align-self-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body d-flex flex-column justify-content-around align-items-center">
+                    <i class="far fa-check-circle"></i>
+                    <p class="text-center modal-message">Customer has been created!</p>
+                </div>
+            </div>       
+        </div>
+    </div>
     <div class="">
         <input type="checkbox" name="" id="nav-toggle">
         <div class="side-bar py-2">
@@ -29,7 +40,7 @@
                 <a class="nav-link mb-2" href="profile.html"><i class="far fa-user side-menu-icons"></i><span>Profile</span></a>
                 <a class="nav-link mb-2" href="create-receipt.html"><i class="side-menu-icons fas fa-tachometer-alt"></i><span>Dashboard</span></a>
                 <a class="nav-link mb-2 active" aria-current="page" href="no-customer.html"><i class="fas fa-users side-menu-icons"></i><span>Customers</span></a>
-                <a class="nav-link mb-2" href="no-history.html"><i class="fas fa-history side-menu-icons"></i><span>History</span></a>
+                <a class="nav-link mb-2" href="#"><i class="fas fa-history side-menu-icons"></i><span>History</span></a>
                 <a class="nav-link mb-2" href="#"><i class="fas fa-briefcase side-menu-icons"></i><span>Drafts</span></a>
                 <a class="nav-link mb-2" href="#"><i class="fas fa-cog side-menu-icons"></i><span>Settings</span></a>
                 <a class="nav-link mb-2" href="#"><i class="fas fa-sign-out-alt side-menu-icons"></i><span>Log out</span></a>
@@ -51,23 +62,44 @@
                     </label>
                     <span class="searchbar d-flex justify-content-between"><input type="search" placeholder="Search" name="search" id="search"><i class="fas fa-search"></i></span>
                 </div>
-                <h3 class="heading">Customers</h3>
+                <h3 class="heading">Customer Details</h3>
             </div>
             <div class="divider w-100"></div>
-            <section class="text-end">
-                <a href="create-customer.html" class="btn btn-primary create-btn mb-5 new" type="submit"><span style="margin-right: 10px;">+</span>New Customer</a>
-                <div class="empty d-flex flex-column align-items-center justify-content-between">
-                    <p class="para mb-3">Oops! no customer has been added</p>
-                    <img class="mb-3" src="./assets/images/empty.png" alt="illustration of empty" style="max-width: 400px; width: 100%;">
+
+            <form action="#" class="customer-info d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="title m-0 invisible">Kindly fill all fields to create new customer</h4>
+                    <p class="d-flex justify-content-end btn edit-btn mb-0"><span class="edit">Edit</span><i class="fas fa-edit"></i></p>
                 </div>
-            </section>
-            
-        </main>
+                <label class="mb-2" for="">Customer's Name</label>
+                <input class="mb-4 input-fields py-1" disabled type="text" name="name" id="" value="Cynthia Joseph">
+                <label class="mb-2" for="">Customer's E-mail</label>
+                <input class="mb-4 input-fields py-1" disabled type="email" name="email" id="" value="CynthiaJoseph@gmail.com">
+                <label class="mb-2" for="">Customer's Address</label>
+                <input class="mb-4 input-fields py-1" disabled type="text" name="address" id="" value="12 Badare street, Ikoyi, lagos">
+                <div class="group d-flex justify-content-between align-items-end mb-4">
+                    <div class="phone d-flex flex-column">
+                        <label class="mb-2" for="phone">Phone Number</label>
+                        <input class="mb-4 input-fields py-1" disabled type="number" name="phone" id="" value="09012345678">
+                    </div>
+                    <div class="gender d-flex flex-column">
+                        <label class="mb-2" for="gender">Gender</label>
+                        <select class="mb-4 input-fields py-1" disabled name="gender" id="" value="Female">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <a class="btn btn-primary create-btn w-25 mx-auto d-none" role="button" data-bs-toggle= "modal" data-bs-target="#staticBackdrop">Create</a>
+                <p class="date text-end">Created on 01/02/2020</p>
+            </form>
+        </main>  
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/edit-button.js"></script>
 </body>
 </html>
