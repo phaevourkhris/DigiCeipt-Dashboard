@@ -37,6 +37,7 @@ body{
 .heading{
     color: var(--purple);
     font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .searchbar{
@@ -68,7 +69,7 @@ body{
 
 .divider{
     background: var(--purple);
-    height: 2px;
+    height: 1px;
     margin-bottom: 2rem;
 }
 

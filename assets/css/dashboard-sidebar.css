@@ -72,6 +72,10 @@
     margin-left: 3rem;
 }
 
+.progress{
+    background: var(--white);
+}
+
 .progress-bar{
     background: #C4C4C4;
     width: 80%;
