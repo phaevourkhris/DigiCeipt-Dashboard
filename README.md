@@ -4,7 +4,8 @@ The Digital receipt app as the name implies will help merchants to generate digi
 
 # Website
 
-Live link: https://digiceipt.netlify.app/
+Landing Page link: https://digiceipt-pjt-57.netlify.app/
+Dashboard Link: https://digiceipt-pjt-57.netlify.app/profile.html
 
 # Design
 
@@ -22,3 +23,8 @@ Figma Link: https://www.figma.com/file/JNwjuBp9i8WM2xs4ivQsYr/DIGITAL-RECEIPT-AP
 8. As you work, Push to your origin and create a PR so it can be evaluated and merged into the upstream
 9. Pull from the upstream regularly before pushing to your origin so you have good code balance and updated code    regularly
 
+# Contributors
+Favour Christopher - @Phaevour
+Mustapha - @Moustee
+Olayinka Atobiloye - @Yin
+Nneka Chukwuemeka - @Nneka
